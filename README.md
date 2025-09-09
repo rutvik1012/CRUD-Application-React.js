@@ -7,7 +7,9 @@ This project demonstrates how to manage global state using Context and perform a
 **🚀 Features**
 
 ✅ Add new users
+
 ✅ Edit existing users (form pre-fills data)
+
 ✅ Delete users
 ✅ Global state management using Context API
 ✅ Form handling with React Hook Form
