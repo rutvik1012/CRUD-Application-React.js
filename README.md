@@ -11,9 +11,13 @@ This project demonstrates how to manage global state using Context and perform a
 ✅ Edit existing users (form pre-fills data)
 
 ✅ Delete users
+
 ✅ Global state management using Context API
+
 ✅ Form handling with React Hook Form
+
 ✅ Vite-powered fast development
+
 
 
 **🛠️ Tech Stack**
@@ -23,6 +27,7 @@ React – UI library
 Context API – State management
 
 React Hook Form – Form handling
+
 
 
 **📂 Project Structure**
@@ -40,6 +45,7 @@ src/
 
 
 
+
 **⚙️ How It Works**
 
 ContextProvider stores all users (userData) and the current user being edited (editUser).
@@ -49,7 +55,11 @@ AddUser handles adding and updating users. If editing, the form auto-fills.
 User shows the list of users with Edit and Delete buttons.
 
 
+
 **📸 Flow Diagram**
 ContextProvider
    ├── User.jsx (List) → Edit/Delete  
    └── AddUser.jsx (Form) → Add/Update 
+
+   <img width="888" height="341" alt="Screenshot 2025-09-09 163336" src="https://github.com/user-attachments/assets/480ae035-651a-47a4-80a2-05114978ec74" />
+
