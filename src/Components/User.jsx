@@ -20,12 +20,13 @@ const User = () => {
       }
     }
   };
-  const filteredUsers = userData.filter(
-    (User) =>
-      User.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      User.job.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      String(User.id).includes(searchTerm)
-  );
+ const filteredUsers = userData.filter(
+  (User) =>
+    (User.name?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
+    (User.job?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
+    String(User.id).includes(searchTerm)
+);
+
 
   const addUserBtn = () => {
     navigate("/AddUser");

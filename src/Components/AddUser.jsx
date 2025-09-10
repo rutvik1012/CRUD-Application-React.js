@@ -57,11 +57,19 @@ const AddUser = () => {
   }
 
   return (
-    <div className="mt-20">
+    <div className="bg-blue-50 h-[100vh]">
+      <div className="text-center py-7">
+        <h1 className="text-3xl font-bold text-blue-500">
+          Job Entry Management
+        </h1>
+        <p className="text-gray-800 mt-2">
+          Manage your users — Add, Edit, Search, and Delete records easily.
+        </p>
+      </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-[45%]  m-auto border bg-blue-50 p-15 ">
-       <div className="flex justify-evenly mb-5">
+        className="w-[50%]  m-auto border-1 bg-blue-50 p-15 ">
+       <div className="flex justify-evenly mb-5 text-xl flex-wrap">
          <div>
           <label>Enter Your Name:</label>
           <br />
