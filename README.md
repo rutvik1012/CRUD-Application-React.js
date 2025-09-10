@@ -62,8 +62,10 @@ ContextProvider
    ├── User.jsx (List) → Edit/Delete  
    └── AddUser.jsx (Form) → Add/Update 
 
-  <img width="1200" height="508" alt="Screenshot 2025-09-09 164510" src="https://github.com/user-attachments/assets/f1ec39fc-6ad1-4fee-9508-7266fc1f1459" />
-  <img width="1353" height="489" alt="Screenshot 2025-09-09 164519" src="https://github.com/user-attachments/assets/019d59b1-9b80-4c02-8a16-7aadf141d785" />
+  <img width="1080" height="808" alt="Screenshot 2025-09-10 171715" src="https://github.com/user-attachments/assets/c0766d1a-2435-4665-9d56-c5deb9bd947a" />
+  <img width="1912" height="804" alt="Screenshot 2025-09-10 171738" src="https://github.com/user-attachments/assets/1397abae-3e8c-448b-bb42-632a07839ce5" />
+
+
 
 
 
