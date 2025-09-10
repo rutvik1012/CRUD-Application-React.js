@@ -9,6 +9,7 @@ const User = () => {
   const navigate = useNavigate();
   const { userData, setUserData, setEditUser } = useContext(UserContext);
   const [openMenuId, setOpenMenuId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleDelet = (id) => {
     // alert('dt')
@@ -19,6 +20,12 @@ const User = () => {
       }
     }
   };
+  const filteredUsers = userData.filter(
+    (User) =>
+      User.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      User.job.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      String(User.id).includes(searchTerm)
+  );
 
   const addUserBtn = () => {
     navigate("/AddUser");
@@ -33,28 +40,45 @@ const User = () => {
   };
 
   return (
-    <>
-      <div className="mt-20">
-        <div className="w-[70%] text-center m-auto  border-2 bg-blue-50">
-          <button
-            className="btn btn-success float-end me-2 mt-2"
-            onClick={addUserBtn}
-          >
-            Add New User
-          </button>
-          <table className="table table-striped ">
+    <div className="bg-blue-50 h-[100vh]">
+      <div className="text-center py-7">
+        <h1 className="text-3xl font-bold text-blue-500">
+          Job Entry Management
+        </h1>
+        <p className="text-gray-800 mt-2">
+          Manage your users — Add, Edit, Search, and Delete records easily.
+        </p>
+      </div>
+      <div className="">
+        <div className="w-[90%] text-center m-auto bg-blue-100 mt-6">
+          <div className="flex justify-around py-9 ">
+            <div className="w-min h-min">
+              <input
+                className="border-2"
+                type="text"
+                placeholder="Search Name..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                style={{ marginBottom: "10px", padding: "5px" }}
+              />
+            </div>
+            <button className="btn btn-success" onClick={addUserBtn}>
+              Add New User
+            </button>
+          </div>
+          <table className="table table-striped w-fit ">
             <thead>
               <tr>
-                <th scope="col">Sr.No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Job</th>
-                <th scope="col">Action</th>
+                <th scope="col" className="w-[15%]">Sr.No</th>
+                <th scope="col" className="w-[35%]">Name</th>
+                <th scope="col" className="w-[30%]">Job</th>
+                <th scope="col" className="w-[20%]">Action</th>
               </tr>
             </thead>
             <tbody>
-              {userData.map((item, index) => (
+              {filteredUsers.map((item, index) => (
                 <tr key={index}>
-                  <td>{index+1}</td>
+                  <td>{index + 1}</td>
                   <td>{item.name}</td>
                   <td>{item.job}</td>
                   <td>
@@ -89,7 +113,7 @@ const User = () => {
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
